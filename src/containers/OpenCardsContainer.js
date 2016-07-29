@@ -1,25 +1,25 @@
 import { openCards } from '../actions';
 import { connect } from 'react-redux'
-import gameButton from '../components/gameButtons';
-
+import gameButton from '../components/gameButton';
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onButtonClick: (e) => {
-      dispatch(openCards(e));
+    onButtonClick: () => {
+      dispatch(openCards());
     },
   };
 };
 
 const mapStateToProps = (state) => {
   return {
-    cells: state,
+    state: state,
+    type:'Open Cards',
   };
 };
 
-const BattleshipApp = connect(
+const OpenCardsContainer = connect(
   mapStateToProps,
-  mapDispatchToProps
+  mapDispatchToProps,
 )(gameButton);
 
-export default BattleshipApp;
+export default OpenCardsContainer;

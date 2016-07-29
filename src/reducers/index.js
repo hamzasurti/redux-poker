@@ -1,9 +1,8 @@
 import { combineReducers } from 'redux';
 import OpenCards from './OpenCards';
 
-
 const cardApp = combineReducers({
-  openCards,
+  OpenCards,
 });
 
 export default cardApp;

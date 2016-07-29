@@ -1,10 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './containers/App';
+import App from './components/App';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
+import  cardApp  from './reducers/index';
 
-ReactDOM.render(  <Provider store={store}>
+let store = createStore(cardApp);
+
+ReactDOM.render(
+  <Provider store={store}>
     <App />
-  </Provider>
-  , document.getElementById('root'));
+  </Provider>,
+  document.getElementById('root')
+)
