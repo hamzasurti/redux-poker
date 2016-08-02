@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 
+// reusable buttons
 const gameButton = ({ onButtonClick,type }) =>  {
   return (
     <div>
